@@ -17,7 +17,7 @@ public class Sufferer {
     @Column(name="sufferer_address")
     private String suffererAddress;
     @Column(name="sufferer_status")
-    private boolean suffererStatus;
+    private String suffererStatus;
     @ManyToOne()
     @JoinColumn(name="city_id")
     private City city;
@@ -29,7 +29,7 @@ public class Sufferer {
     public Sufferer() {
     }
 
-    public Sufferer(int id, String suffererName, String suffererLastName, String suffererAddress, boolean suffererStatus, City city, District district) {
+    public Sufferer(int id, String suffererName, String suffererLastName, String suffererAddress, String suffererStatus, City city, District district) {
         this.id = id;
         this.suffererName = suffererName;
         this.suffererLastName = suffererLastName;
@@ -71,11 +71,11 @@ public class Sufferer {
         this.suffererAddress = suffererAddress;
     }
 
-    public boolean isSuffererStatus() {
+    public String isSuffererStatus() {
         return suffererStatus;
     }
 
-    public void setSuffererStatus(boolean suffererStatus) {
+    public void setSuffererStatus(String suffererStatus) {
         this.suffererStatus = suffererStatus;
     }
 
