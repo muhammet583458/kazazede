@@ -28,9 +28,5 @@ public class DistrictManager implements DistrictService {
         return new SuccessDataResult<List<District>>(this.districtDao.findAll(), "Data Listelendi");
     }
 
-    @Override
-    public Result add(District district) {
-        this.districtDao.save(district);
-        return new SuccessResult("Ürün Eklendi");
-    }
+
 }

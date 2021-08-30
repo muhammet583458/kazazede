@@ -30,7 +30,7 @@ public class SuffererManager implements SuffererService {
     @Override
     public Result add(Sufferer sufferer) {
         this.suffererDao.save(sufferer);
-        return new SuccessResult("Ürün Eklendi");
+        return new SuccessResult("Kazazede Eklendi");
     }
 
     @Override
@@ -46,5 +46,10 @@ public class SuffererManager implements SuffererService {
     @Override
     public DataResult<List<Sufferer>> getByDistrictId(int district) {
         return new SuccessDataResult<List<Sufferer>>(this.suffererDao.getByDistrictId(district), "Data Listelendi");
+    }
+
+    @Override
+    public DataResult<Sufferer> getBySuffererLastName(String suffererLastName) {
+        return new SuccessDataResult<Sufferer>(this.suffererDao.getBySuffererLastName(suffererLastName), "Data Listelendi");
     }
 }

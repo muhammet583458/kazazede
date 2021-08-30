@@ -9,5 +9,5 @@ import java.util.List;
 
 public interface CityService {
     DataResult<List<City>> getAll();
-    Result add(City city);
+
 }

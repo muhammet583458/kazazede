@@ -19,11 +19,11 @@ public class Sufferer {
     @Column(name="sufferer_status")
     private String suffererStatus;
     @ManyToOne()
-    @JoinColumn(name="city_id")
+    @JoinColumn(name="sufferer_city")
     private City city;
 
     @ManyToOne()
-    @JoinColumn(name="district_id")
+    @JoinColumn(name="sufferer_district")
     private District district;
 
     public Sufferer() {

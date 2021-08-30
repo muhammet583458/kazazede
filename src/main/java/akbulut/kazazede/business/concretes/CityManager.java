@@ -29,9 +29,5 @@ public class CityManager implements CityService {
         return new SuccessDataResult<List<City>>(this.cityDao.findAll(), "Data Listelendi");
     }
 
-    @Override
-    public Result add(City city) {
-        this.cityDao.save(city);
-        return new SuccessResult("Ürün Eklendi");
-    }
+
 }
