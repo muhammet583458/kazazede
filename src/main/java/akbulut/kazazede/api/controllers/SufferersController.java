@@ -29,7 +29,7 @@ public class SufferersController {
         return this.suffererService.add(sufferer);
     }
     @GetMapping("/getbysufferername")
-    public DataResult<Sufferer> getBySuffererName(@RequestParam String suffererName){
+    public DataResult<List<Sufferer>> getBySuffererName(@RequestParam String suffererName){
         return this.suffererService.getBySuffererName(suffererName);
     }
     @GetMapping("/getbycity")
@@ -41,7 +41,7 @@ public class SufferersController {
         return this.suffererService.getByDistrictId(districtId);
     }
     @GetMapping("/getbysuffererlastname")
-    public DataResult<Sufferer> getBySuffererLastName(@RequestParam String suffererLastName){
+    public DataResult<List<Sufferer>> getBySuffererLastName(@RequestParam String suffererLastName){
         return this.suffererService.getBySuffererLastName(suffererLastName);
     }
 }

@@ -34,8 +34,8 @@ public class SuffererManager implements SuffererService {
     }
 
     @Override
-    public DataResult<Sufferer> getBySuffererName(String suffererName) {
-        return new SuccessDataResult<Sufferer>(this.suffererDao.getBySuffererName(suffererName), "Data Listelendi");
+    public DataResult<List<Sufferer>> getBySuffererName(String suffererName) {
+        return new SuccessDataResult<List<Sufferer>>(this.suffererDao.getBySuffererName(suffererName), "Data Listelendi");
     }
 
     @Override
@@ -49,7 +49,7 @@ public class SuffererManager implements SuffererService {
     }
 
     @Override
-    public DataResult<Sufferer> getBySuffererLastName(String suffererLastName) {
-        return new SuccessDataResult<Sufferer>(this.suffererDao.getBySuffererLastName(suffererLastName), "Data Listelendi");
+    public DataResult<List<Sufferer>> getBySuffererLastName(String suffererLastName) {
+        return new SuccessDataResult<List<Sufferer>>(this.suffererDao.getBySuffererLastName(suffererLastName), "Data Listelendi");
     }
 }

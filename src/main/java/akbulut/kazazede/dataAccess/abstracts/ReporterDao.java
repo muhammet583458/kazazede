@@ -4,7 +4,9 @@ import akbulut.kazazede.entities.concretes.Reporter;
 import akbulut.kazazede.entities.concretes.Sufferer;
 import org.springframework.data.jpa.repository.JpaRepository;
 
+import java.util.List;
+
 public interface ReporterDao extends JpaRepository<Reporter,Integer> {
-    Reporter getByReporterName(String reporterName);
-    Reporter getByReporterLastName(String reporterLastName);
+    List<Reporter> getByReporterName(String reporterName);
+    List<Reporter> getByReporterLastName(String reporterLastName);
 }

@@ -35,12 +35,12 @@ public class ReporterManager implements ReporterService {
     }
 
     @Override
-    public DataResult<Reporter> getByReporterName(String reporterName) {
-        return new SuccessDataResult<Reporter>(this.reporterDao.getByReporterName(reporterName), "Data Listelendi");
+    public DataResult<List<Reporter>> getByReporterName(String reporterName) {
+        return new SuccessDataResult<List<Reporter>>(this.reporterDao.getByReporterName(reporterName), "Data Listelendi");
     }
 
     @Override
-    public DataResult<Reporter> getByReporterLastName(String reporterLastName) {
-        return new SuccessDataResult<Reporter>(this.reporterDao.getByReporterLastName(reporterLastName), "Data Listelendi");
+    public DataResult<List<Reporter>> getByReporterLastName(String reporterLastName) {
+        return new SuccessDataResult<List<Reporter>>(this.reporterDao.getByReporterLastName(reporterLastName), "Data Listelendi");
     }
 }

@@ -10,7 +10,7 @@ import java.util.List;
 public interface ReporterService {
     DataResult<List<Reporter>> getAll();
     Result add(Reporter reporter);
-    DataResult<Reporter> getByReporterName(String reporterName);
-    DataResult<Reporter> getByReporterLastName(String reporterLastName);
+    DataResult<List<Reporter>> getByReporterName(String reporterName);
+    DataResult<List<Reporter>> getByReporterLastName(String reporterLastName);
 
 }

@@ -9,8 +9,8 @@ import java.util.List;
 public interface SuffererService {
     DataResult<List<Sufferer>> getAll();
     Result add(Sufferer sufferer);
-    DataResult<Sufferer> getBySuffererName(String suffererName);
+    DataResult<List<Sufferer>> getBySuffererName(String suffererName);
     DataResult<List<Sufferer>> getByCityId(int city);
     DataResult<List<Sufferer>> getByDistrictId(int district);
-    DataResult<Sufferer> getBySuffererLastName(String suffererLastName);
+    DataResult<List<Sufferer>> getBySuffererLastName(String suffererLastName);
 }

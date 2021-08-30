@@ -30,11 +30,11 @@ public class ReportersController {
         return this.reporterService.add(reporter);
     }
     @GetMapping("/getbyreportername")
-    public DataResult<Reporter> getByReporterName(@RequestParam String reporterName){
+    public DataResult<List<Reporter>> getByReporterName(@RequestParam String reporterName){
         return this.reporterService.getByReporterName(reporterName);
     }
     @GetMapping("/getbyreporterlastname")
-    public DataResult<Reporter> getByReporterLastName(@RequestParam String reporterLastName){
+    public DataResult<List<Reporter>> getByReporterLastName(@RequestParam String reporterLastName){
         return this.reporterService.getByReporterLastName(reporterLastName);
     }
 }
