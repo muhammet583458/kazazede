@@ -21,6 +21,6 @@ public class KazazedeApplication {
 		return new Docket(DocumentationType.SWAGGER_2)
 				.select()
 				.apis(RequestHandlerSelectors.basePackage("akbulut.kazazede"))
-				.build();
+				.build();// denemecommit
 	}
 }
