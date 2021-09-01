@@ -9,6 +9,7 @@ import akbulut.kazazede.dataAccess.abstracts.CityDao;
 import akbulut.kazazede.dataAccess.abstracts.DistrictDao;
 import akbulut.kazazede.entities.concretes.City;
 import akbulut.kazazede.entities.concretes.District;
+import akbulut.kazazede.entities.concretes.Sufferer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -26,6 +27,12 @@ public class DistrictManager implements DistrictService {
     @Override
     public DataResult<List<District>> getAll() {
         return new SuccessDataResult<List<District>>(this.districtDao.findAll(), "Data Listelendi");
+    }
+
+    @Override
+    public DataResult<List<District>> getByCityId(int city) {
+        return new SuccessDataResult<List<District>>(this.districtDao.getByCityId(city), "Data Listelendi");
+
     }
 
 

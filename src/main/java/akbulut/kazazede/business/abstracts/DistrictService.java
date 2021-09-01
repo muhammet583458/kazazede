@@ -8,5 +8,6 @@ import java.util.List;
 
 public interface DistrictService {
     DataResult<List<District>> getAll();
+    DataResult<List<District>> getByCityId(int city);
 
 }

@@ -5,11 +5,9 @@ import akbulut.kazazede.business.abstracts.DistrictService;
 import akbulut.kazazede.core.utilities.results.DataResult;
 
 import akbulut.kazazede.entities.concretes.District;
+import akbulut.kazazede.entities.concretes.Sufferer;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -27,5 +25,8 @@ public class DistrictsController {
     public DataResult<List<District>> getAll(){
         return this.districtService.getAll();
     }
-
+    @GetMapping("/getbycity")
+    public DataResult<List<District>> getByCityId(@RequestParam int cityId){
+        return this.districtService.getByCityId(cityId);
+    }
 }

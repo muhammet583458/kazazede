@@ -26,10 +26,14 @@ public class Sufferer {
     @JoinColumn(name="sufferer_district")
     private District district;
 
+    @ManyToOne()
+    @JoinColumn(name="sufferer_reporter")
+    private Reporter reporter;
+
     public Sufferer() {
     }
 
-    public Sufferer(int id, String suffererName, String suffererLastName, String suffererAddress, String suffererStatus, City city, District district) {
+    public Sufferer(int id, String suffererName, String suffererLastName, String suffererAddress, String suffererStatus, City city, District district, Reporter reporter) {
         this.id = id;
         this.suffererName = suffererName;
         this.suffererLastName = suffererLastName;
@@ -37,6 +41,7 @@ public class Sufferer {
         this.suffererStatus = suffererStatus;
         this.city = city;
         this.district = district;
+        this.reporter = reporter;
     }
 
     public int getId() {
@@ -71,10 +76,6 @@ public class Sufferer {
         this.suffererAddress = suffererAddress;
     }
 
-    public String isSuffererStatus() {
-        return suffererStatus;
-    }
-
     public void setSuffererStatus(String suffererStatus) {
         this.suffererStatus = suffererStatus;
     }
@@ -93,5 +94,17 @@ public class Sufferer {
 
     public void setDistrict(District district) {
         this.district = district;
+    }
+
+    public String getSuffererStatus() {
+        return suffererStatus;
+    }
+
+    public Reporter getReporter() {
+        return reporter;
+    }
+
+    public void setReporter(Reporter reporter) {
+        this.reporter = reporter;
     }
 }
