@@ -40,6 +40,10 @@ public class SufferersController {
     public DataResult<List<Sufferer>> getByDistrictId(@RequestParam int districtId){
         return this.suffererService.getByDistrictId(districtId);
     }
+    @GetMapping("/getbyid")
+    public DataResult<List<Sufferer>> getById(@RequestParam int id){
+        return this.suffererService.findById(id);
+    }
     @GetMapping("/getbysuffererlastname")
     public DataResult<List<Sufferer>> getBySuffererLastName(@RequestParam String suffererLastName){
         return this.suffererService.getBySuffererLastName(suffererLastName);

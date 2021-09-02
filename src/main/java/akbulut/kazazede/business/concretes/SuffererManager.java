@@ -52,4 +52,10 @@ public class SuffererManager implements SuffererService {
     public DataResult<List<Sufferer>> getBySuffererLastName(String suffererLastName) {
         return new SuccessDataResult<List<Sufferer>>(this.suffererDao.getBySuffererLastName(suffererLastName), "Data Listelendi");
     }
+
+    @Override
+    public DataResult<List<Sufferer>> findById(int id) {
+        return new SuccessDataResult<List<Sufferer>>(this.suffererDao.findById(id), "Data Listelendi");
+
+    }
 }

@@ -10,5 +10,6 @@ public interface SuffererDao extends JpaRepository<Sufferer,Integer> {
     List<Sufferer> getByCityId(int city);
     List<Sufferer> getByDistrictId(int district);
     List<Sufferer> getBySuffererLastName(String suffererLastName);
+    List<Sufferer> findById(int id);
 
 }

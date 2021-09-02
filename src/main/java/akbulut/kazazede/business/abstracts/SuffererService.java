@@ -13,4 +13,5 @@ public interface SuffererService {
     DataResult<List<Sufferer>> getByCityId(int city);
     DataResult<List<Sufferer>> getByDistrictId(int district);
     DataResult<List<Sufferer>> getBySuffererLastName(String suffererLastName);
+    DataResult<List<Sufferer>> findById(int id);
 }
