@@ -30,10 +30,14 @@ public class Sufferer {
     @JoinColumn(name="sufferer_reporter")
     private Reporter reporter;
 
+    @ManyToOne()
+    @JoinColumn(name="sufferer_founder")
+    private Founder founder;
+
     public Sufferer() {
     }
 
-    public Sufferer(int id, String suffererName, String suffererLastName, String suffererAddress, String suffererStatus, City city, District district, Reporter reporter) {
+    public Sufferer(int id, String suffererName, String suffererLastName, String suffererAddress, String suffererStatus, City city, District district, Reporter reporter, Founder founder) {
         this.id = id;
         this.suffererName = suffererName;
         this.suffererLastName = suffererLastName;
@@ -42,6 +46,7 @@ public class Sufferer {
         this.city = city;
         this.district = district;
         this.reporter = reporter;
+        this.founder = founder;
     }
 
     public int getId() {
@@ -76,6 +81,10 @@ public class Sufferer {
         this.suffererAddress = suffererAddress;
     }
 
+    public String getSuffererStatus() {
+        return suffererStatus;
+    }
+
     public void setSuffererStatus(String suffererStatus) {
         this.suffererStatus = suffererStatus;
     }
@@ -96,15 +105,19 @@ public class Sufferer {
         this.district = district;
     }
 
-    public String getSuffererStatus() {
-        return suffererStatus;
-    }
-
     public Reporter getReporter() {
         return reporter;
     }
 
     public void setReporter(Reporter reporter) {
         this.reporter = reporter;
+    }
+
+    public Founder getFounder() {
+        return founder;
+    }
+
+    public void setFounder(Founder founder) {
+        this.founder = founder;
     }
 }
