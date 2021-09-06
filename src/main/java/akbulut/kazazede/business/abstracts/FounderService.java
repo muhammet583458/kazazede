@@ -11,4 +11,5 @@ public interface FounderService {
     DataResult<List<Founder>> getAll();
     Result add(Founder reporter);
     DataResult<List<Founder>> getById(int id);
+    DataResult<Founder> getByFounderPhone(String founderPhone);
 }

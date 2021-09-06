@@ -33,4 +33,8 @@ public class FoundersController {
     public DataResult<List<Founder>> getById(@RequestParam int id){
         return this.founderService.getById(id);
     }
+    @GetMapping("/getbyfounderphone")
+    public DataResult<Founder> getByFounderPhone(@RequestParam String founderPhone){
+        return this.founderService.getByFounderPhone(founderPhone);
+    }
 }

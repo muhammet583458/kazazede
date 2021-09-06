@@ -39,4 +39,9 @@ public class FounderManager implements FounderService {
     public DataResult<List<Founder>> getById(int id) {
         return new SuccessDataResult<List<Founder>>(this.founderDao.getById(id), "Data Listelendi");
     }
+
+    @Override
+    public DataResult<Founder> getByFounderPhone(String founderPhone) {
+        return new SuccessDataResult<Founder>(this.founderDao.getByFounderPhone(founderPhone), "Data Listelendi");
+    }
 }

@@ -8,4 +8,5 @@ import java.util.List;
 
 public interface FounderDao extends JpaRepository<Founder,Integer> {
     List<Founder> getById(int id);
+    Founder getByFounderPhone(String phone);
 }
