@@ -7,6 +7,7 @@ import akbulut.kazazede.core.utilities.results.SuccessDataResult;
 import akbulut.kazazede.core.utilities.results.SuccessResult;
 import akbulut.kazazede.dataAccess.abstracts.ReporterDao;
 import akbulut.kazazede.dataAccess.abstracts.SuffererDao;
+import akbulut.kazazede.entities.concretes.Founder;
 import akbulut.kazazede.entities.concretes.Reporter;
 import akbulut.kazazede.entities.concretes.Sufferer;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -42,5 +43,9 @@ public class ReporterManager implements ReporterService {
     @Override
     public DataResult<List<Reporter>> getByReporterLastName(String reporterLastName) {
         return new SuccessDataResult<List<Reporter>>(this.reporterDao.getByReporterLastName(reporterLastName), "Data Listelendi");
+    }
+    @Override
+    public DataResult<Reporter> getByReporterPhone(String founderPhone) {
+        return new SuccessDataResult<Reporter>(this.reporterDao.getByReporterPhone(founderPhone), "Data Listelendi");
     }
 }

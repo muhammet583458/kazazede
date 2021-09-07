@@ -4,6 +4,7 @@ import akbulut.kazazede.business.abstracts.ReporterService;
 import akbulut.kazazede.business.abstracts.SuffererService;
 import akbulut.kazazede.core.utilities.results.DataResult;
 import akbulut.kazazede.core.utilities.results.Result;
+import akbulut.kazazede.entities.concretes.Founder;
 import akbulut.kazazede.entities.concretes.Reporter;
 import akbulut.kazazede.entities.concretes.Sufferer;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -36,5 +37,9 @@ public class ReportersController {
     @GetMapping("/getbyreporterlastname")
     public DataResult<List<Reporter>> getByReporterLastName(@RequestParam String reporterLastName){
         return this.reporterService.getByReporterLastName(reporterLastName);
+    }
+    @GetMapping("/getbyreporterphone")
+    public DataResult<Reporter> getByReporterPhone(@RequestParam String reporterPhone){
+        return this.reporterService.getByReporterPhone(reporterPhone);
     }
 }
